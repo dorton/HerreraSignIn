@@ -6,10 +6,10 @@
   <thead>
     <tr>
       <!-- <th><%= model_class.human_attribute_name(:id) %></th> -->
-      <th><%= model_class.human_attribute_name("Date") %></th>
-      <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:student) %></th>
-      <th><%= model_class.human_attribute_name(:reason) %></th>
+      <th><%= model_class.human_attribute_name("Date and Time") %></th>
+      <th><%= model_class.human_attribute_name("Parent Name") %></th>
+      <th><%= model_class.human_attribute_name("Child's Name") %></th>
+      <th><%= model_class.human_attribute_name("Destination") %></th>
       
       <!-- <th><%=t '.actions', :default => t("helpers.actions") %></th> -->
     </tr>
@@ -40,3 +40,5 @@
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_visitor_path,
             :class => 'btn btn-primary' %> -->
+
+            <%= link_to "Export to csv", request.parameters.merge({:format => :csv})%>

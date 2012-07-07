@@ -7,7 +7,13 @@ class VisitorsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @visitors }
+      format.csv
     end
+
+    if params[:format] == 'csv'
+      generate_csv_headers("negotiations-#{Time.now.strftime("%Y%m%d")}") 
+    end
+
   end
 
   # GET /visitors/1
