@@ -28,11 +28,20 @@
           </a>
           <a class="brand" href="/">Herrera Elementary</a>
           <div class="nav-collapse">
-            <ul class="nav pull-right">
-            <li><a href="/admin/index">Lists</a></li>
-            
-            
-            </ul>
+           
+         <ul class="nav pull-right">
+            <li class="divider-vertical"></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lists <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/visitors">Visitors</a></li>
+                <li><a href="/student_check_outs">Student Checkouts</a></li>
+                <li><a href="/hisd_employees">HISD Employees</a></li>
+              </ul>
+            </li>
+          </ul>
+          
+
           </div><!--/.nav-collapse -->
         </div>
       
@@ -42,13 +51,21 @@
 
 
       <!-- Main hero unit for a primary marketing message or call to action -->
-          <div class="hero-unit">
-          
-            <h1>Herrera Elementary E-Sign In</h1>
-        
-          </div>
+    
+    <div class="hero-unit">
+       
+        <!-- <div class="row">
+            <div class="span3">
+              <img src="/images/herrera_seal.png" alt="">
+            </div>
+            <div class="span9"> -->
+              <h1>Herrera Electronic Sign In Book</h1>
+           <!--  </div>
+        </div> -->
+    </div>
 
         <%= yield %>
+
 
     </div>
 
@@ -70,4 +87,6 @@
     <script src="/app/assets/bootstrap/js/bootstrap-carousel.js"></script>
     <script src="/app/assets/bootstrap/js/bootstrap-typeahead.js"></script>
 </body>
+
+
 </html>
