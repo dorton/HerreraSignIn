@@ -6,3 +6,4 @@ jQuery ->
   $('#visitors').dataTable()
   	
 
+
