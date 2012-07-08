@@ -3,7 +3,6 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 jQuery ->
-  $('#visitors').dataTable()
-  	
-
-
+  $('#visitors').dataTable
+  	"aaSorting": [[ 0, "desc" ]]
+  	"sPaginationType": "full_numbers"
