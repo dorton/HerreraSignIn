@@ -6,13 +6,13 @@
 <table id="visitors" class="table table-striped">
   <thead>
     <tr>
-      <!-- <th><%= model_class.human_attribute_name(:id) %></th> -->
+      <th><%= model_class.human_attribute_name(:id) %></th> -->
       <th><%= model_class.human_attribute_name("Date and Time") %></th>
       <th><%= model_class.human_attribute_name("Parent Name") %></th>
       <th><%= model_class.human_attribute_name("Child's Name") %></th>
       <th><%= model_class.human_attribute_name("Destination") %></th>
       
-      <!-- <th><%=t '.actions', :default => t("helpers.actions") %></th> -->
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
@@ -24,7 +24,7 @@
         <td><%= visitor.student %></td>
         <td><%= visitor.reason %></td>
         
-        <!-- <td>
+        <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_visitor_path(visitor), :class => 'btn btn-mini' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
@@ -32,7 +32,7 @@
                       :method => :delete,
                       :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
                       :class => 'btn btn-mini btn-danger' %>
-        </td> -->
+        </td> 
       </tr>
     <% end %>
   </tbody>
@@ -42,7 +42,7 @@
             new_visitor_path,
             :class => 'btn btn-primary' %> -->
 <hr>
-<!-- <div class="page-footer">
+<div class="page-footer">
 <%= link_to "Download", request.parameters.merge({:format => :csv}), :class => 'btn btn-mini' %>
-</div> -->
+</div>
 </div>

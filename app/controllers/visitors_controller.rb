@@ -85,5 +85,20 @@ class VisitorsController < ApplicationController
       format.html { redirect_to visitors_url }
       format.json { head :no_content }
     end
+
+  def admin
+    @visitors = Visitor.all
+
+    respond_to do |format|
+      format.html # admin.html.erb
+      format.json { render json: @visitors }
+      format.csv
+    end
+
+    if params[:format] == 'csv'
+      generate_csv_headers("negotiations-#{Time.now.strftime("%Y%m%d")}") 
+    end
+
+  end
   end
 end
