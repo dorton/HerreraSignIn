@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+    @visitor = Visitor.new
   end
 
   def new
