@@ -1,5 +1,7 @@
 Herrerasignin::Application.routes.draw do
-  get "admin/index"
+  mount RailsAdmin::Engine => '/rails_admin', :as => 'rails_admin'
+
+  devise_for :administrators
 
   resources :hisd_employees
 
