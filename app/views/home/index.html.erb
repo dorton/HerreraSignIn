@@ -30,7 +30,10 @@
         </li>
         <li class="span4"align="center">
           <div class="thumbnail">
-            <a href="/student_check_outs/new"><img src="/images/checkout.png" alt="">
+            <%= link_to "#checkoutform", "data-toggle"=>"modal" do %>
+              <%= image_tag "checkout.png"%>
+            <% end %>
+            <!-- <a href="/student_check_outs/new"><img src="/images/checkout.png" alt=""> -->
             <div class="caption">
               <h3>Sign Out a Student</h3></a>
             </div>
@@ -38,7 +41,10 @@
         </li>
         <li class="span4"align="center">
           <div class="thumbnail">
-            <a href="/hisd_employees/new"><img src="/images/HISD.png" alt="">
+            <%= link_to "#hisdform", "data-toggle"=>"modal" do %>
+              <%= image_tag "HISD.png"%>
+            <% end %>
+            <!-- <a href="/hisd_employees/new"><img src="/images/HISD.png" alt=""> -->
             <div class="caption">
               <h3>HISD Employees</h3></a>
             </div>
@@ -60,6 +66,28 @@
        </div>      
 </div>
 
+<div id="checkoutform" class="modal hide fade">
+
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">&times;</button>
+        <h3>Student Checkout</h3>
+      </div>      
+      <div class="modal-body"> 
+        <%= render partial: "student_check_outs/form"%>
+       </div>      
+</div>
+
+<div id="hisdform" class="modal hide fade">
+
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">&times;</button>
+        <h3>HISD Employee Sign In</h3>
+      </div>      
+      <div class="modal-body"> 
+        <%= render partial: "hisd_employees/form"%>
+        
+       </div>      
+</div>
 ​
 
 <!-- MODAL PRACTICE -->

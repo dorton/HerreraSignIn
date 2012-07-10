@@ -1,6 +1,8 @@
 class HomeController < ApplicationController
   def index
     @visitor = Visitor.new
+    @student_check_out = StudentCheckOut.new
+    @hisd_employee = HisdEmployee.new
   end
 
   def new

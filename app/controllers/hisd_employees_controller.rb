@@ -44,7 +44,7 @@ class HisdEmployeesController < ApplicationController
 
     respond_to do |format|
       if @hisd_employee.save
-        format.html { redirect_to @hisd_employee, notice: 'Hisd employee was successfully created.' }
+        format.html { redirect_to @hisd_employee, alert: 'Hisd employee was successfully created.' }
         format.json { render json: @hisd_employee, status: :created, location: @hisd_employee }
       else
         format.html { render action: "new" }
