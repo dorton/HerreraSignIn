@@ -1,6 +1,6 @@
 class Visitor < ActiveRecord::Base
   attr_accessible :name, :reason, :student
 
-  validates :name,:student, :presence => true
+  validates :name, :presence => true
 
 end

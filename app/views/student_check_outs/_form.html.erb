@@ -1,4 +1,10 @@
-<%= form_for @student_check_out, validate: true, :html => { :class => 'form-horizontal' } do |f| %>
+<%= simple_form_for @student_check_out, validate: true, :html => { :class => 'form-horizontal' } do |f| %>
+<div class="alert alert-error">
+  <a class="close" data-dismiss="alert" href="#">×</a>
+  <h4 class="alert-heading"></h4>
+  You must enter your name and the student's name before submitting.
+</div>
+
   <div class="control-group">
     <%= f.label :parent, :class => 'control-label' %>
     <div class="controls">

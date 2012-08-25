@@ -50,7 +50,7 @@ class VisitorsController < ApplicationController
 
     respond_to do |format|
       if @visitor.save
-        format.html { redirect_to @visitor, alert: 'Visitor was successfully created.' }
+        format.html { redirect_to @visitor, notice: 'Visitor was successfully created.' }
         format.json { render json: @visitor, status: :created, location: @visitor }
       else
         format.html { render action: "new" }
