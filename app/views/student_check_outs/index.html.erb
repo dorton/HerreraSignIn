@@ -19,7 +19,7 @@
     <% @student_check_outs.each do |student_check_out| %>
       <tr>
         <!-- <td><%= link_to student_check_out.id, student_check_out_path(student_check_out) %></td> -->
-        <td><%=l student_check_out.created_at.localtime, :format => :long %></td>
+        <td><%=l student_check_out.created_at, :format => :long %></td>
         <td><%= student_check_out.parent %></td>
         <td><%= student_check_out.student %></td>
         <td><%= student_check_out.grade %></td>

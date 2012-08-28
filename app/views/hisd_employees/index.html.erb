@@ -18,7 +18,7 @@
     <% @hisd_employees.each do |hisd_employee| %>
       <tr>
         <!-- <td><%= link_to hisd_employee.id, hisd_employee_path(hisd_employee) %></td> -->
-        <td><%= l hisd_employee.created_at.localtime, :format => :long %></td>
+        <td><%= l hisd_employee.created_at, :format => :long %></td>
         <td><%= hisd_employee.name %></td>
         <td><%= hisd_employee.employee_id %></td>
         <td><%= hisd_employee.reason %></td>

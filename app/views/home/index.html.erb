@@ -1,17 +1,4 @@
 
- <!-- <div class="row">
- <div class="span4" style="text-align:center">
-<%= link_to "Visitors", new_visitor_path, :class => 'thumbnails' %> 
-</div>
-
- <div class="span4" style="text-align:center">
-<%= link_to "Student Check Out", new_student_check_out_path, :class => 'btn btn-success btn-large' %>
-</div>
-
- <div class="span4" style="text-align:center">
-<%= link_to "HISD Employees", new_hisd_employee_path, :class => 'btn btn-success btn-large' %>
-</div>
-</div> -->
 
 
 <div class="span12">
@@ -20,7 +7,9 @@
       <ul class="thumbnails">
         <li class="span4"align="center">
           <div class="thumbnail">
-            <a href="/visitors/new"><img src="/images/visitor.png" alt="">
+            <%= link_to "#visitorsform", "data-toggle"=>"modal" do %>
+              <%= image_tag "visitor.png"%>
+            <% end %>
             <div class="caption">
               <h3>Visitors Sign In</h3></a>
             </div>
@@ -28,7 +17,10 @@
         </li>
         <li class="span4"align="center">
           <div class="thumbnail">
-            <a href="/student_check_outs/new"><img src="/images/checkout.png" alt="">
+            <%= link_to "#checkoutform", "data-toggle"=>"modal" do %>
+              <%= image_tag "checkout.png"%>
+            <% end %>
+            <!-- <a href="/student_check_outs/new"><img src="/images/checkout.png" alt=""> -->
             <div class="caption">
               <h3>Sign Out a Student</h3></a>
             </div>
@@ -36,7 +28,10 @@
         </li>
         <li class="span4"align="center">
           <div class="thumbnail">
-            <a href="/hisd_employees/new"><img src="/images/HISD.png" alt="">
+            <%= link_to "#hisdform", "data-toggle"=>"modal" do %>
+              <%= image_tag "HISD.png"%>
+            <% end %>
+            <!-- <a href="/hisd_employees/new"><img src="/images/HISD.png" alt=""> -->
             <div class="caption">
               <h3>HISD Employees</h3></a>
             </div>
@@ -45,24 +40,40 @@
       </ul>
     </div>
 </div>
-​
 
-<!-- MODAL PRACTICE -->
 
-<!-- <div id="myVisitors" class="modal hide fade">
+<div id="visitorsform" class="modal hide fade">
+
       <div class="modal-header">
         <button class="close" data-dismiss="modal">&times;</button>
         <h3>Visitor Sign In</h3>
       </div>      
       <div class="modal-body"> 
-       <div class="page-header">
-          <h1>Campus Visitors <br><small>Please sign in below.</small></h1>
-        </div>
-         
+        <%= render partial: "visitors/form"%>
+       </div>
+            
+</div>
+
+<div id="checkoutform" class="modal hide fade">
+
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">&times;</button>
+        <h3>Student Checkout</h3>
+      </div>      
+      <div class="modal-body"> 
+        <%= render partial: "student_check_outs/form"%>
        </div>      
-      <div class="modal-footer">
-        <input type="submit" class="btn btn-large btn-primary" value="View Number"/>
-      </div>
-      </form>
-</div>          
-<h2>Click <a data-toggle="modal" href="#myVisitors" class="btn">HERE</a> for the random number generator.</h2> -->
+</div>
+
+<div id="hisdform" class="modal hide fade">
+
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">&times;</button>
+        <h3>HISD Employee Sign In</h3>
+      </div>      
+      <div class="modal-body"> 
+        <%= render partial: "hisd_employees/form"%>
+        
+       </div>      
+</div>
+​

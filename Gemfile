@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
+gem "rails_admin"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -33,6 +34,10 @@ gem 'jquery-ui-rails'
 
 gem 'jquery-rails'
 
+gem 'simple_form'
+
+
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -48,3 +53,6 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
+
+
+gem "devise"
