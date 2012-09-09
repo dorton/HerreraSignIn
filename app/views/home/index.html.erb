@@ -12,6 +12,12 @@
             <% end %>
             <div class="caption">
               <h3>Visitors Sign In</h3></a>
+
+<!-- LINK TO SIGN OUT MODAL -->
+<!--               <h3><%= link_to "#visitorssignout", "data-toggle"=>"modal", :class => 'btn btn-large btn-danger' do %>
+              <%= "Sign Out" %>
+            <% end %></h3> -->
+           
             </div>
           </div>
         </li>
@@ -34,11 +40,18 @@
             <!-- <a href="/hisd_employees/new"><img src="/images/HISD.png" alt=""> -->
             <div class="caption">
               <h3>HISD Employees</h3></a>
+
+<!-- LINK TO SIGN OUT MODAL -->
+<!--               <h3><%= link_to "#hisdsignout", "data-toggle"=>"modal", :class => 'btn btn-large btn-danger' do %>
+              <%= "Sign Out" %>
+            <% end %></h3> -->
+
             </div>
           </div>
         </li>
       </ul>
     </div>
+
 </div>
 
 
@@ -76,4 +89,62 @@
         
        </div>      
 </div>
+
+<div id="visitorssignout" class="modal hide fade">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">&times;</button>
+        <h3>Visitor Sign Out</h3>
+      </div>      
+      <div class="modal-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Name</th> 
+              <th>Sign In Time</th> 
+              <th>Sign Out</th> 
+            </tr>
+          </thead>
+          <tbody>
+            <% Visitor.where(sign_out: nil).each do |visitor| %>
+            <tr>
+              <td><%= visitor.name %></td>
+              <td><%= visitor.created_at.strftime("%I:%M%p") %></td>
+              <td><%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_visitor_path(visitor), :class => 'btn btn-danger' %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+       </div>      
+</div>
 ​
+<div id="hisdsignout" class="modal hide fade">
+
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">&times;</button>
+        <h3>HISD Employee Sign Out</h3>
+      </div>      
+      <div class="modal-body"> 
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Name</th> 
+              <th>Sign In Time</th> 
+              <th>Sign Out</th>  
+            </tr>
+          </thead>
+          <tbody>
+
+        <% HisdEmployee.where(sign_out: nil).each do |hisd_employee| %>
+        <tr>
+              <td><%= hisd_employee.name %></td>
+              <td><%= hisd_employee.created_at.strftime("%I:%M%p") %></td>
+              <td><%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_hisd_employee_path(hisd_employee), :class => 'btn btn-danger' %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+        
+       </div>      
+</div>
