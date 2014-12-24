@@ -1,0 +1,2 @@
+module StudentCheckOutsHelper
+end

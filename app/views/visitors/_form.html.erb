@@ -1,0 +1,33 @@
+<%= simple_form_for @visitor, validate: true, :html => { :class => 'form-horizontal' } do |f| %>
+<div class="alert alert-error">
+  <a class="close" data-dismiss="alert" href="#">×</a>
+  <h4 class="alert-heading"></h4>
+  You must enter your name before submitting.
+</div>
+ 
+  <div class="control-group">
+    <%= f.label :name, :class => 'control-label'%>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'text_field', :autofocus => true  %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :student, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :student, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label "Destination", :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :reason, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit 'Submit', :class => 'btn btn-primary btn-large' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                "/", :class => 'btn btn-large' %>
+  </div>
+<% end %>
+

@@ -1,0 +1,9 @@
+<%- headers = ["Date and Time", "Parent Name", "Child's Name", "Destination"] -%>
+<%= CSV.generate_line headers %>
+<%- @negotiations.each do |n| -%>
+<%- row = [ n.visitor.created_at.localtime,
+            n.visitor.name,
+            n.visitor.student,
+            visitor.reason ] -%>
+<%=   CSV.generate_line row %>
+<%- end -%>

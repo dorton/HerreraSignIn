@@ -1,0 +1,12 @@
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-24 10:29:26 -0600
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 27ms
+
+ActiveRecord::StatementInvalid (Could not find table 'visitors'):
+  app/controllers/home_controller.rb:3:in `new'
+  app/controllers/home_controller.rb:3:in `index'
+
+
