@@ -1,9 +1,0 @@
-<head>
-    <meta http-equiv="refresh" content="5;url=<%= "/" %>"
-</head>
-
-<%- model_class = @student_check_out.class -%>
-<div class="page-header">
-  <h1 align="center" ><%= @student_check_out.parent %>, you checked out</h1>
-   <h1 align="center" ><%= @student_check_out.student %> at <%= @student_check_out.created_at.strftime("%I:%M%p") %></h1>
- </div>
