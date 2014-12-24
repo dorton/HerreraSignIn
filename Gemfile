@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.6'
 gem "rails_admin"
 
 # Bundle edge Rails instead:
@@ -21,7 +21,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer', :platforms => :ruby
+  # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
   
@@ -29,7 +29,7 @@ group :assets do
 end
 
 gem 'twitter-bootstrap-rails'
-gem 'jquery-datatables-rails'
+gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
 gem 'jquery-ui-rails'
 
 gem 'jquery-rails'
